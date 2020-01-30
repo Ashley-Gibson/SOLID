@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Open Closed Principle", "SO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Single Responsibility Principle", "Single Responsibility Principle\Single Responsibility Principle.csproj", "{D64A1A6E-EFCF-40C9-8817-D127070F84A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Liskov Substitute Principle", "Liskov Substitute Principle\Liskov Substitute Principle.csproj", "{DF156197-AAB1-4A86-96D9-70B783E72327}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Liskov Substitution Principle", "Liskov Substitute Principle\Liskov Substitution Principle.csproj", "{DF156197-AAB1-4A86-96D9-70B783E72327}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interface Segragation Principle", "Interface Segragation Principle\Interface Segragation Principle.csproj", "{BAB8FC34-D19D-4EEB-B0F0-BEA041BBD572}"
 EndProject
