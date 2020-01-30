@@ -1,0 +1,14 @@
+SOLID/.vs/
+SOLID/Dependency Inversion Principle/bin/
+SOLID/Dependency Inversion Principle/obj/
+SOLID/Interface Segragation Principle/bin/
+SOLID/Interface Segragation Principle/obj/
+SOLID/Liskov Substitute Principle/bin/
+SOLID/Liskov Substitute Principle/obj/
+SOLID/packages/
+SOLID/Single Responsibility Principle/bin/
+SOLID/Single Responsibility Principle/obj/
+SOLID/SOLID/bin/
+SOLID/SOLID/obj/
+SOLID/Tests/bin/
+SOLID/Tests/obj/
