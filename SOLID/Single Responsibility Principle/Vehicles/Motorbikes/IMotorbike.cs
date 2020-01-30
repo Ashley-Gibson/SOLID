@@ -2,6 +2,6 @@
 {
     interface IMotorbike
     {
-
+        int Mileage { get; set; }
     }
 }
