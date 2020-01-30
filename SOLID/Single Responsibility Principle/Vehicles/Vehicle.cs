@@ -1,17 +1,14 @@
 ﻿namespace Single_Responsibility_Principle
 {
-    public class Vehicle : IVehicle
+    public abstract class Vehicle : IVehicle
     {
-        private int _wheels { get; set; }
         private string _make { get; set; }
         private string _model { get; set; }
         private decimal _price { get; set; }
 
-        public int Wheels
-        { 
-            get { return _wheels; }
-            set { _wheels = Wheels; }
-        }
+        public int VehicleID { get; set; }
+        public abstract int Wheels { get; }
+
         public string Make
         {
             get { return _make; }

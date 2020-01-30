@@ -11,5 +11,7 @@ namespace Single_Responsibility_Principle
             get { return _mileage; }
             set { _mileage = Mileage; }
         }
+
+        public override int Wheels => 4;
     }
 }

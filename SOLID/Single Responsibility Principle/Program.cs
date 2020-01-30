@@ -1,16 +1,33 @@
-﻿namespace Single_Responsibility_Principle
+﻿using System;
+
+namespace Single_Responsibility_Principle
 {
-    class Program
+    public class Program
     {
+        enum Status
+        {
+            Running,
+            Finished
+        };
+
         static void Main(string[] args)
         {
-            // Give User Message to select a vehicle to output data for
+            int vehicleNumberFromUserInput = 0;
+            
+            while (vehicleNumberFromUserInput != -1)
+            {
+                vehicleNumberFromUserInput = PrepareConsole();
 
-            // Get data from the correct vehicle
-
-            // Output data to the console
-
-            // Hang the console and loop until the user quits
+                VehicleManager.ShowVehicleDetails(vehicleNumberFromUserInput);
+            }
         }
+
+        private static int PrepareConsole()
+        {
+            Console.WriteLine("\nWhat vehicle would you like to view?\n");
+            string UserInput = Console.ReadLine();
+
+            return int.TryParse(UserInput, out int UserInputNumber) ? UserInputNumber : -1;
+        }       
     }
 }
