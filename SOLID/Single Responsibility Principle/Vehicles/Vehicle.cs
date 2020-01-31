@@ -33,6 +33,6 @@
 
     public class UnknownVehicle : Vehicle
     {
-        public override string ErrorMessage => "Unkown Vehicle ID Entered.";
+        public override string ErrorMessage => Constants.UnknownVehicleIDMessage;
     }
 }

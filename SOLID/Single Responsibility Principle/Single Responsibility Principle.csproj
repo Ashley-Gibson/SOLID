@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants.cs" />
     <Compile Include="VehicleManager.cs" />
     <Compile Include="Vehicles\Cars\Car.cs" />
     <Compile Include="Vehicles\Cars\ICar.cs" />

@@ -72,21 +72,30 @@ namespace Single_Responsibility_Principle
 
         private static void OutputVehicleDetails(Vehicle vehicle)
         {
-            Console.WriteLine("\n####################");
+            string OutputString = ConstructOutputString(vehicle);
+
+            Console.WriteLine(OutputString);
+        }
+
+        public static string ConstructOutputString(Vehicle vehicle)
+        {
+            string OutputString = "\n####################\n";
 
             if (vehicle.GetType() != typeof(UnknownVehicle))
             {
-                Console.WriteLine(
-                    $"\nMake: {vehicle.Make}\n" +
+                OutputString +=
+                    $"Make: {vehicle.Make}\n" +
                     $"Model: {vehicle.Model}\n" +
                     $"Price: £{vehicle.Price}\n" +
                     $"Wheels: {vehicle.Wheels}\n" +
-                    $"Mileage: {vehicle.Mileage}\n");
+                    $"Mileage: {vehicle.Mileage}\n";
             }
             else
             {
-                Console.WriteLine($"\n{vehicle.ErrorMessage}\n");
+                OutputString += $"{vehicle.ErrorMessage}\n";
             }
+
+            return OutputString;
         }
     }
 }
