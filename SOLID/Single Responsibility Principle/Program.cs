@@ -24,6 +24,8 @@ namespace Single_Responsibility_Principle
 
         private static int PrepareConsole()
         {
+            Console.WriteLine("####################");
+
             Console.WriteLine("\nWhat vehicle would you like to view?\n");
             string UserInput = Console.ReadLine();
 

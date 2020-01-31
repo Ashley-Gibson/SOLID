@@ -7,22 +7,32 @@
         private decimal _price { get; set; }
 
         public int VehicleID { get; set; }
-        public abstract int Wheels { get; }
+        public virtual int Wheels { get; }
+
+        public virtual int Mileage { get; set; }
+
+        public virtual string ErrorMessage { get; set; }
 
         public string Make
         {
             get { return _make; }
-            set { _make = Make; }
+            set { _make = value; }
         }
         public string Model
         {
             get { return _model; }
-            set { _model = Model; }
+            set { _model = value; }
         }
         public decimal Price
         {
             get { return _price; }
-            set { _price = Price; }
+            set { _price = value; }
         }
+    }
+
+
+    public class UnknownVehicle : Vehicle
+    {
+        public override string ErrorMessage => "Unkown Vehicle ID Entered.";
     }
 }

@@ -6,9 +6,9 @@ namespace Single_Responsibility_Principle
     {
         private int _mileage { get; set; }
 
-        public int Mileage { 
+        public override int Mileage { 
             get { return _mileage; } 
-            set { _mileage = Mileage; } 
+            set { _mileage = value; } 
         }
 
         public override int Wheels => 2;
