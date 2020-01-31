@@ -63,10 +63,12 @@ namespace Single_Responsibility_Principle
             OutputVehicleDetails(vehicle);
         }
 
-        private static Vehicle GetVehicleDetails(int vehicleNumberFromUserInput)
+        public static Vehicle GetVehicleDetails(int vehicleNumberFromUserInput)
         {
-            return allVehicles.Where(v => v.VehicleID == vehicleNumberFromUserInput).Any() 
-                ? allVehicles.Where(v => v.VehicleID == vehicleNumberFromUserInput).FirstOrDefault() 
+            IEnumerable<Vehicle> returnedVehicle = allVehicles.Where(v => v.VehicleID == vehicleNumberFromUserInput);
+
+            return returnedVehicle.Any() 
+                ? returnedVehicle.FirstOrDefault()
                 : new UnknownVehicle() { };
         }
 
