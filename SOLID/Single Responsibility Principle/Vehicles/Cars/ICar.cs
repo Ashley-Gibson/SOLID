@@ -2,6 +2,6 @@
 {
     interface ICar
     {
-
+        int Mileage { get; set; }
     }
 }
