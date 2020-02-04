@@ -56,13 +56,6 @@ namespace Single_Responsibility_Principle
             }
         };
 
-        public static void ShowVehicleDetails(int vehicleNumberFromUserInput)
-        {
-            Vehicle vehicle = GetVehicleDetails(vehicleNumberFromUserInput);
-
-            OutputVehicleDetails(vehicle);
-        }
-
         public static Vehicle GetVehicleDetails(int vehicleNumberFromUserInput)
         {
             IEnumerable<Vehicle> returnedVehicle = allVehicles.Where(v => v.VehicleID == vehicleNumberFromUserInput);
@@ -72,10 +65,8 @@ namespace Single_Responsibility_Principle
                 : new UnknownVehicle() { };
         }
 
-        private static void OutputVehicleDetails(Vehicle vehicle)
-        {
-            string OutputString = ConstructOutputString(vehicle);
-
+        public static void OutputVehicleDetails(string OutputString)
+        {           
             Console.WriteLine(OutputString);
         }
 

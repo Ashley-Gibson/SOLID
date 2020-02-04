@@ -1,5 +1,4 @@
-﻿using Single_Responsibility_Principle;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Single_Responsibility_Principle.Tests
 {

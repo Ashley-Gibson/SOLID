@@ -18,7 +18,9 @@ namespace Single_Responsibility_Principle
             {
                 vehicleNumberFromUserInput = PrepareConsole();
 
-                VehicleManager.ShowVehicleDetails(vehicleNumberFromUserInput);
+                Vehicle vehicle = VehicleManager.GetVehicleDetails(vehicleNumberFromUserInput);
+                string OutputString = VehicleManager.ConstructOutputString(vehicle);
+                VehicleManager.OutputVehicleDetails(OutputString);
             }
         }
 
