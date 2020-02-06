@@ -12,7 +12,11 @@ namespace Open_Closed_Principle
 
         static void Main(string[] args)
         {
-            // Allow User to choose a type of Vehicle
+            // Allow User to choose a type of Vehicle (instead of a Vehicle ID)
+
+            // 1 = Car
+            // 2 = Motorbike
+            // 3 = Plane
 
             // Ensure the Vehicle interface allows you to choose a different type of Vehicle (Plane/Car/Motorbike... etc) without having to change the functionality of any of the existing classes
             // Include Switch statement to choose different vehicles (make it easily extendible)
@@ -33,7 +37,7 @@ namespace Open_Closed_Principle
         {
             Console.WriteLine("####################");
 
-            Console.WriteLine("\nWhat vehicle would you like to view?\n");
+            Console.WriteLine("\nWhat vehicle type would you like to view?\n");
             string UserInput = Console.ReadLine();
 
             return int.TryParse(UserInput, out int UserInputNumber) ? UserInputNumber : -1;
