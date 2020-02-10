@@ -32,7 +32,6 @@ namespace Open_Closed_Principle
         }
     }
 
-
     public class UnknownVehicle : Vehicle
     {
         public override string ErrorMessage => Constants.UnknownVehicleIDMessage;

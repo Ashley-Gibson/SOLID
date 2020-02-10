@@ -4,8 +4,12 @@
     {
         public const string UnknownVehicleIDMessage = "Unkown Vehicle ID Entered.";
 
-        public const int CarTypeID = 0;
-        public const int MotorbikeID = 1;
-        public const int PlaneID = 2;
+        public enum VehicleType
+        {
+            Car = 1,
+            Motorbike = 2,
+            Plane = 3,
+            Unknown
+        }
     }
 }

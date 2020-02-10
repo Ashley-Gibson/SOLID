@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using static Open_Closed_Principle.Constants;
 
 namespace Open_Closed_Principle
 {
@@ -16,14 +17,6 @@ namespace Open_Closed_Principle
                 Price = 6000m,
                 Mileage = 10000
             },
-            new Car()
-            {
-                VehicleID = 1,
-                Make = "Vauxhall",
-                Model = "Corsa",
-                Price = 7000m,
-                Mileage = 18000
-            },
             new Motorbike()
             {
                 VehicleID = 2,
@@ -32,37 +25,33 @@ namespace Open_Closed_Principle
                 Price = 4500m,
                 Mileage = 2000
             },
-            new Motorbike()
-            {
-                VehicleID = 3,
-                Make = "Kawasaki",
-                Model = "Ninja",
-                Price = 5500m,
-                Mileage = 3200
-            },
             new Plane()
             {
                 VehicleID = 4,
                 Make = "Boeing",
                 Model = "747",
                 Price = 2700000m               
-            },
-            new Plane()
-            {
-                VehicleID = 5,
-                Make = "Airbus",
-                Model = "A300",
-                Price = 2100000m
             }
         };
 
-        public static Vehicle GetVehicleDetails(int vehicleNumberFromUserInput)
+        internal static VehicleType GetVehicleTypeFromUserInput(int vehicleNumberFromUserInput)
         {
-            IEnumerable<Vehicle> returnedVehicle = allVehicles.Where(v => v.VehicleID == vehicleNumberFromUserInput);
+            return Enum.IsDefined(typeof(VehicleType), vehicleNumberFromUserInput) ? (VehicleType)vehicleNumberFromUserInput : VehicleType.Unknown;
+        }
 
-            return returnedVehicle.Any() 
-                ? returnedVehicle.FirstOrDefault()
-                : new UnknownVehicle() { };
+        public static Vehicle GetVehicleDetails(VehicleType vehicleTypeFromUserInput)
+        {            
+            switch (vehicleTypeFromUserInput)
+            {
+                case VehicleType.Car:
+                    return allVehicles.OfType<Car>().FirstOrDefault();
+                case VehicleType.Motorbike:
+                    return allVehicles.OfType<Motorbike>().FirstOrDefault();
+                case VehicleType.Plane:
+                    return allVehicles.OfType<Plane>().FirstOrDefault();
+                default:
+                    return new UnknownVehicle();
+            }
         }
 
         public static void OutputVehicleDetails(string OutputString)

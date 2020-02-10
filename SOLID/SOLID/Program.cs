@@ -1,15 +1,10 @@
 ﻿using System;
+using static Open_Closed_Principle.Constants;
 
 namespace Open_Closed_Principle
 {
     class Program
-    {
-        enum Status
-        {
-            Running,
-            Finished
-        };
-
+    { 
         static void Main(string[] args)
         {
             // Allow User to choose a type of Vehicle (instead of a Vehicle ID)
@@ -22,13 +17,16 @@ namespace Open_Closed_Principle
             // Include Switch statement to choose different vehicles (make it easily extendible)
             
             int vehicleNumberFromUserInput = 0;
-
             while (vehicleNumberFromUserInput != -1)
             {
                 vehicleNumberFromUserInput = PrepareConsole();
 
-                Vehicle vehicle = VehicleManager.GetVehicleDetails(vehicleNumberFromUserInput);
+                VehicleType vehicleTypeFromUserInput = VehicleManager.GetVehicleTypeFromUserInput(vehicleNumberFromUserInput);
+
+                Vehicle vehicle = VehicleManager.GetVehicleDetails(vehicleTypeFromUserInput);
+
                 string OutputString = VehicleManager.ConstructOutputString(vehicle);
+
                 VehicleManager.OutputVehicleDetails(OutputString);
             }
         }
