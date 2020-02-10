@@ -2,10 +2,10 @@
 
 namespace Single_Responsibility_Principle.Tests
 {
-    [TestClass()]
+    [TestClass]
     public class SRP_Tests
     {
-        [TestMethod()]
+        [TestMethod]
         public void ConstructOutputString_UnknownVehicle()
         {
             Vehicle vehicle = new UnknownVehicle() { };
@@ -14,7 +14,7 @@ namespace Single_Responsibility_Principle.Tests
             Assert.AreEqual($"\n####################\n{Constants.UnknownVehicleIDMessage}\n", OutputString);
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void GetVehicleDetails_Input()
         {
             Vehicle expectedVehicle = new Car() { };
@@ -24,7 +24,7 @@ namespace Single_Responsibility_Principle.Tests
             Assert.AreEqual(expectedVehicle.GetType(), returnedVehicle.GetType());
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void GetVehicleDetails_UnknownVehicle()
         {
             Vehicle expectedVehicle = new UnknownVehicle() { };

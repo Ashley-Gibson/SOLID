@@ -3,20 +3,21 @@ using static Open_Closed_Principle.Constants;
 
 namespace Open_Closed_Principle.Tests
 {
-    [TestClass()]
+    [TestClass]
     public class OCP_Tests
     {
-        private readonly int carNumber = 1;
-        private readonly int motorbikeNumber = 2;
-        private readonly int planeNumber = 3;
+        private const int carNumber = 1;
+        private const int motorbikeNumber = 2;
+        private const int planeNumber = 3;
+
+        private const VehicleType expectedVehicleTypeCar = VehicleType.Car;
+        private const VehicleType expectedVehicleTypeMotorbike = VehicleType.Motorbike;
+        private const VehicleType expectedVehicleTypePlane = VehicleType.Plane;
+        private const VehicleType expectedVehicleType = VehicleType.Unknown;
 
         [TestMethod]
         public void GetVehicleTypeFromUserInput_Valid()
         {
-            VehicleType expectedVehicleTypeCar = VehicleType.Car;
-            VehicleType expectedVehicleTypeMotorbike = VehicleType.Motorbike;
-            VehicleType expectedVehicleTypePlane = VehicleType.Plane;
-
             VehicleType actualVehicleTypeCar = VehicleManager.GetVehicleTypeFromUserInput(carNumber);
             VehicleType actualVehicleTypeMotorbike = VehicleManager.GetVehicleTypeFromUserInput(motorbikeNumber);
             VehicleType actualVehicleTypePlane = VehicleManager.GetVehicleTypeFromUserInput(planeNumber);
@@ -33,8 +34,6 @@ namespace Open_Closed_Principle.Tests
             const int unknownInput4 = 4;
             const int unknownInput99 = 99;
 
-            VehicleType expectedVehicleType = VehicleType.Unknown;
-
             VehicleType actualVehicleType0 = VehicleManager.GetVehicleTypeFromUserInput(unknownInput0);
             VehicleType actualVehicleType4 = VehicleManager.GetVehicleTypeFromUserInput(unknownInput4);
             VehicleType actualVehicleType99 = VehicleManager.GetVehicleTypeFromUserInput(unknownInput99);            
@@ -42,6 +41,26 @@ namespace Open_Closed_Principle.Tests
             Assert.AreEqual(expectedVehicleType, actualVehicleType0);
             Assert.AreEqual(expectedVehicleType, actualVehicleType4);
             Assert.AreEqual(expectedVehicleType, actualVehicleType99);
-        }        
+        }
+
+        [TestMethod]
+        public void GetVehicleDetails_Input()
+        {
+            Vehicle expectedVehicle = new Car() { };
+
+            Vehicle returnedVehicle = VehicleManager.GetVehicleDetails(VehicleType.Car);
+
+            Assert.AreEqual(expectedVehicle.GetType(), returnedVehicle.GetType());
+        }
+
+        [TestMethod]
+        public void GetVehicleDetails_UnknownVehicle()
+        {
+            Vehicle expectedVehicle = new UnknownVehicle() { };
+
+            Vehicle returnedVehicle = VehicleManager.GetVehicleDetails(VehicleType.Unknown);
+
+            Assert.AreEqual(expectedVehicle.GetType(), returnedVehicle.GetType());
+        }
     }
 }
