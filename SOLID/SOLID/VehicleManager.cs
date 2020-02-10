@@ -34,7 +34,7 @@ namespace Open_Closed_Principle
             }
         };
 
-        internal static VehicleType GetVehicleTypeFromUserInput(int vehicleNumberFromUserInput)
+        public static VehicleType GetVehicleTypeFromUserInput(int vehicleNumberFromUserInput)
         {
             return Enum.IsDefined(typeof(VehicleType), vehicleNumberFromUserInput) ? (VehicleType)vehicleNumberFromUserInput : VehicleType.Unknown;
         }

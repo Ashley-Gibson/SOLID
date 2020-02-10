@@ -61,6 +61,10 @@
       <Project>{D64A1A6E-EFCF-40C9-8817-D127070F84A1}</Project>
       <Name>Single Responsibility Principle</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SOLID\Open Closed Principle.csproj">
+      <Project>{b5bcdf0b-1787-4146-8be2-b5dd1ee6d139}</Project>
+      <Name>Open Closed Principle</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
