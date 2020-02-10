@@ -6,17 +6,9 @@ namespace Open_Closed_Principle
     class Program
     { 
         static void Main(string[] args)
-        {
-            // Allow User to choose a type of Vehicle (instead of a Vehicle ID)
-
-            // 1 = Car
-            // 2 = Motorbike
-            // 3 = Plane
-
-            // Ensure the Vehicle interface allows you to choose a different type of Vehicle (Plane/Car/Motorbike... etc) without having to change the functionality of any of the existing classes
-            // Include Switch statement to choose different vehicles (make it easily extendible)
-            
+        {            
             int vehicleNumberFromUserInput = 0;
+
             while (vehicleNumberFromUserInput != -1)
             {
                 vehicleNumberFromUserInput = PrepareConsole();
