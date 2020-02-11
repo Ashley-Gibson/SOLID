@@ -13,5 +13,10 @@ namespace Liskov_Substitution_Principle
         }
 
         public override int Wheels => 4;
+
+        public override decimal CalculateDepreciation()
+        {
+            return 0m;
+        }
     }
 }

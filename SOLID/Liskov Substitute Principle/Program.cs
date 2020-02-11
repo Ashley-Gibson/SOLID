@@ -13,6 +13,8 @@ namespace Liskov_Substitution_Principle
 
             // Ensure these can be substituted without having to change functionality of the classes
 
+            // Include abstract classes to ensure polymorphism is made which shows the same methods can be used for different classes using different functionality without changing the class structure
+
             int vehicleNumberFromUserInput = 0;
 
             while (vehicleNumberFromUserInput != -1)

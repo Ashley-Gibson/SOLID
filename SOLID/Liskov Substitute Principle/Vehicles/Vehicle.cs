@@ -1,6 +1,4 @@
-﻿using Liskov_Substitution_Principle;
-
-namespace Liskov_Substitution_Principle
+﻿namespace Liskov_Substitution_Principle
 {
     public abstract class Vehicle : IVehicle
     {
@@ -30,10 +28,12 @@ namespace Liskov_Substitution_Principle
             get { return _price; }
             set { _price = value; }
         }
+
+        public abstract decimal CalculateDepreciation();
     }
 
-    public class UnknownVehicle : Vehicle
+    public class UnknownVehicle
     {
-        public override string ErrorMessage => Constants.UnknownVehicleIDMessage;
+        public string ErrorMessage => Constants.UnknownVehicleIDMessage;
     }
 }
