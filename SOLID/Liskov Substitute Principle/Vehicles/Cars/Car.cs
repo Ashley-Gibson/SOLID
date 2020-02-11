@@ -16,7 +16,7 @@ namespace Liskov_Substitution_Principle
 
         public override decimal CalculateDepreciation()
         {
-            return 0m;
+            return Price / (Mileage / 100);
         }
     }
 }

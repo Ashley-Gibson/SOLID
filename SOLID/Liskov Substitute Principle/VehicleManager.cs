@@ -70,7 +70,8 @@ namespace Liskov_Substitution_Principle
                     $"Model: {vehicle.Model}\n" +
                     $"Price: £{vehicle.Price}\n" +
                     $"Wheels: {vehicle.Wheels}\n" +
-                    $"Mileage: {vehicle.Mileage}\n";
+                    $"Mileage: {vehicle.Mileage}\n" +
+                    $"Depreciation Value: £{vehicle.CalculateDepreciation()}\n";
             }
             else
             {

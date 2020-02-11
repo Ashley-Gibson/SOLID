@@ -29,11 +29,14 @@
             set { _price = value; }
         }
 
-        public abstract decimal CalculateDepreciation();
+        public virtual decimal CalculateDepreciation()
+        {
+            return 0m;
+        }
     }
 
-    public class UnknownVehicle
+    public class UnknownVehicle : Vehicle
     {
-        public string ErrorMessage => Constants.UnknownVehicleIDMessage;
+        public override string ErrorMessage => Constants.UnknownVehicleIDMessage;
     }
 }
