@@ -15,7 +15,8 @@ namespace Liskov_Substitution_Principle
                 Make = "Ford",
                 Model = "Focus",
                 Price = 6000m,
-                Mileage = 10000
+                Mileage = 10000,
+                ManufactureYear = 2018
             },
             new Motorbike()
             {
@@ -23,14 +24,16 @@ namespace Liskov_Substitution_Principle
                 Make = "Honda",
                 Model = "VFR",
                 Price = 4500m,
-                Mileage = 2000
+                Mileage = 2000,
+                ManufactureYear = 2016
             },
             new Plane()
             {
                 VehicleID = 4,
                 Make = "Boeing",
                 Model = "747",
-                Price = 2700000m               
+                Price = 2700000m,
+                ManufactureYear = 2018
             }
         };
 

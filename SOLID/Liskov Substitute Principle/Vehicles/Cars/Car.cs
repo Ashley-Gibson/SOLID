@@ -13,10 +13,5 @@ namespace Liskov_Substitution_Principle
         }
 
         public override int Wheels => 4;
-
-        public override decimal CalculateDepreciation()
-        {
-            return Price / (Mileage / 100);
-        }
     }
 }
