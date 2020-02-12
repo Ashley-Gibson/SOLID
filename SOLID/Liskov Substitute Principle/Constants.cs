@@ -1,4 +1,4 @@
-﻿namespace Open_Closed_Principle
+﻿namespace Liskov_Substitution_Principle
 {
     public class Constants
     {
