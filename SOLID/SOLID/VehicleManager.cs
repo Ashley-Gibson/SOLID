@@ -66,7 +66,7 @@ namespace Open_Closed_Principle
             if (vehicle.GetType() != typeof(UnknownVehicle))
             {
                 OutputString +=
-                    $"Make: {vehicle.Make}\n" +
+                    $"\nMake: {vehicle.Make}\n" +
                     $"Model: {vehicle.Model}\n" +
                     $"Price: £{vehicle.Price}\n" +
                     $"Wheels: {vehicle.Wheels}\n" +
@@ -74,7 +74,7 @@ namespace Open_Closed_Principle
             }
             else
             {
-                OutputString += $"{vehicle.ErrorMessage}\n";
+                OutputString += $"\n{vehicle.ErrorMessage}\n";
             }
 
             return OutputString;

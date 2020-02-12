@@ -8,7 +8,7 @@ namespace Liskov_Substitution_Principle
 
         public override decimal CalculateDepreciation()
         {
-            return 0m;
+            return Price - (1000 * (Mileage / 1000000)) * Age;
         }
     }
 }

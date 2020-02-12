@@ -2,7 +2,7 @@
 {
     public class Constants
     {
-        public const string UnknownVehicleIDMessage = "Unkown Vehicle ID Entered.";
+        public const string UnknownVehicleIDMessage = "Unknown Vehicle ID Entered.";
 
         public enum VehicleType
         {
