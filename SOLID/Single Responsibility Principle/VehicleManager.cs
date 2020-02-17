@@ -85,7 +85,7 @@ namespace Single_Responsibility_Principle
             }
             else
             {
-                OutputString += $"\n{vehicle.ErrorMessage}\n";
+                OutputString += $"\n{Constants.UnknownVehicleIDMessage}\n";
             }
 
             return OutputString;
