@@ -11,7 +11,7 @@ namespace Single_Responsibility_Principle.Tests
             Vehicle vehicle = new UnknownVehicle() { };
             string OutputString = VehicleManager.ConstructOutputString(vehicle);
 
-            Assert.AreEqual($"\n####################\n{Constants.UnknownVehicleIDMessage}\n", OutputString);
+            Assert.AreEqual($"\n####################\n\n{Constants.UnknownVehicleIDMessage}\n", OutputString);
         }
 
         [TestMethod]

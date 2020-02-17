@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ISP_Tests.cs" />
     <Compile Include="LSP_Tests.cs" />
     <Compile Include="OCP_Tests.cs" />
     <Compile Include="SRP_Tests.cs" />
@@ -58,6 +59,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Interface Segragation Principle\Interface Segragation Principle.csproj">
+      <Project>{bab8fc34-d19d-4eeb-b0f0-bea041bbd572}</Project>
+      <Name>Interface Segragation Principle</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Liskov Substitute Principle\Liskov Substitution Principle.csproj">
       <Project>{df156197-aab1-4a86-96d9-70b783e72327}</Project>
       <Name>Liskov Substitution Principle</Name>
