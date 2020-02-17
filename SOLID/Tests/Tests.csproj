@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DIP_Tests.cs" />
     <Compile Include="ISP_Tests.cs" />
     <Compile Include="LSP_Tests.cs" />
     <Compile Include="OCP_Tests.cs" />
@@ -59,6 +60,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Dependency Inversion Principle\Dependency Inversion Principle.csproj">
+      <Project>{7d9c77c5-7fac-437b-96c5-a27776b34906}</Project>
+      <Name>Dependency Inversion Principle</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Interface Segragation Principle\Interface Segragation Principle.csproj">
       <Project>{bab8fc34-d19d-4eeb-b0f0-bea041bbd572}</Project>
       <Name>Interface Segragation Principle</Name>
