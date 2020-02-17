@@ -49,11 +49,37 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="DIP_Tests.cs" />
+    <Compile Include="ISP_Tests.cs" />
+    <Compile Include="LSP_Tests.cs" />
+    <Compile Include="OCP_Tests.cs" />
+    <Compile Include="SRP_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dependency Inversion Principle\Dependency Inversion Principle.csproj">
+      <Project>{7d9c77c5-7fac-437b-96c5-a27776b34906}</Project>
+      <Name>Dependency Inversion Principle</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Interface Segragation Principle\Interface Segragation Principle.csproj">
+      <Project>{bab8fc34-d19d-4eeb-b0f0-bea041bbd572}</Project>
+      <Name>Interface Segragation Principle</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Liskov Substitute Principle\Liskov Substitution Principle.csproj">
+      <Project>{df156197-aab1-4a86-96d9-70b783e72327}</Project>
+      <Name>Liskov Substitution Principle</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Single Responsibility Principle\Single Responsibility Principle.csproj">
+      <Project>{D64A1A6E-EFCF-40C9-8817-D127070F84A1}</Project>
+      <Name>Single Responsibility Principle</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SOLID\Open Closed Principle.csproj">
+      <Project>{b5bcdf0b-1787-4146-8be2-b5dd1ee6d139}</Project>
+      <Name>Open Closed Principle</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
