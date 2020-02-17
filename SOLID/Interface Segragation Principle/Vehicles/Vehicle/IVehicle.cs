@@ -2,7 +2,6 @@
 {
     interface IVehicle
     {
-        // Same functionality as LSV but sort out interfaces to be more abstract
         int VehicleID { get; set; }
         int Wheels { get; }
         string Make { get; set; }

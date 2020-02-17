@@ -2,7 +2,7 @@
 
 namespace Interface_Segragation_Principle
 {
-    public abstract class Vehicle : IVehicle
+    public abstract class Vehicle : IVehicle, IErrorHandling
     {
         private string _make { get; set; }
         private string _model { get; set; }
@@ -54,10 +54,5 @@ namespace Interface_Segragation_Principle
         {
             return Price - (1000 * (Mileage / 10000)) * Age;
         }
-    }
-
-    public class UnknownVehicle : Vehicle
-    {
-        public override string ErrorMessage => Constants.UnknownVehicleIDMessage;
     }
 }
